@@ -35,7 +35,7 @@ startQuiz.onclick = function () {
 
    overlay.className = "showquiz";
 
-   timeID = window.setInterval(countdown(), 1000);
+   timeID = window.setInterval(countdown, 1000);
 
 }
 
