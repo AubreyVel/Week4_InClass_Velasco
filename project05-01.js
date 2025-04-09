@@ -33,22 +33,21 @@ let questionList = document.querySelectorAll("div#quiz input");
 // step5
 startQuiz.onclick = function () {
 
-   overlay.className = "showquiz"
+   overlay.className = "showquiz";
 
-   timeID = windows.setInterval(countdown(), 1000);
+   timeID = window.setInterval(countdown(), 1000);
 
 }
 
 // step 6
 function countdown() { 
    if (timeLeft == 0){
-      clearInterval(timeID)
-      let totalCorrect = checkAnswers()
+      clearInterval(timeID)//6a
+
+      let totalCorrect = checkAnswers()//6b
       
       if (totalCorrect == correctAnswers.length){
          window.alert("Congratulations, you got 100%");
-         
-
       }
       else { //step 6c
          timeLeft = quizTime
